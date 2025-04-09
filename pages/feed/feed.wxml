@@ -1,0 +1,48 @@
+<!-- pages/feed/feed.wxml -->
+<view class="container">
+  <scroll-view 
+    scroll-y
+    class="message-list"
+    bindscrolltolower="onReachBottom"
+    enablePullDownRefresh="{{true}}"
+    bindrefresh="onPullDownRefresh"
+  >
+    <view 
+      wx:for="{{messages}}"
+      wx:key="id"
+      class="card"
+    >
+      <view class="card-header">
+        <image src="{{item.author.avatarUrl}}" class="avatar"/>
+        <view class="info">
+          <text class="nickname">{{item.author.nickName}}</text>
+          <text class="time">{{item.createdAt}}</text>
+        </view>
+      </view>
+      
+      <text class="card-content">{{item.content}}</text>
+      
+      <view wx:if="{{item.images.length}}" class="card-images">
+        <swiper 
+          circular
+          indicator-dots="{{item.images.length > 1}}"
+        >
+          <swiper-item 
+            wx:for="{{item.images}}"
+            wx:key="*this"
+          >
+            <image src="{{item}}" mode="aspectFill"/>
+          </swiper-item>
+        </swiper>
+      </view>
+    </view>
+    
+    <view wx:if="{{isLoading}}" class="loading">
+      <text>Loading...</text>
+    </view>
+    
+    <view wx:if="{{!hasMore}}" class="no-more">
+      —— 没有更多内容了 ——
+    </view>
+  </scroll-view>
+</view>

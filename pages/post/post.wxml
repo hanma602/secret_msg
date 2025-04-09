@@ -1,0 +1,44 @@
+<!-- pages/post/post.wxml -->
+<view class="container">
+  <textarea 
+    placeholder="分享你的想法..."
+    value="{{content}}"
+    bindinput="onContentInput"
+    class="textarea"
+    maxlength="500"
+  />
+  
+  <!--view class="image-uploader">
+    <view 
+      wx:for="{{images}}"
+      wx:key="*this"
+      class="image-preview"
+    >
+      <image src="{{item}}" mode="aspectFill"/>
+      <icon 
+        type="clear" 
+        size="20"
+        bindtap="removeImage"
+        data-index="{{index}}"
+        class="remove-icon"
+      />
+    </view>
+    
+    <view 
+      wx:if="{{images.length < 3}}"
+      class="upload-btn"
+      bindtap="addImage"
+    >
+      <icon type="add" size="24"/>
+      <text>添加图片</text>
+    </view>
+  </view-->
+  
+  <button 
+    class="button"
+    bindtap="handleSubmit"
+    loading="{{isSubmitting}}"
+  >
+    发布留言
+  </button>
+</view>

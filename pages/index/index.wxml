@@ -1,0 +1,33 @@
+<!-- pages/emoji-message/index.wxml -->
+<view class="container">
+  <view class="header">
+    <text>文字隐藏工具:在明文中加入隐藏信息，可以让别人看不到，或者增加文字数量</text>
+  </view>
+
+  <view class="input-section">
+    <view class="p">
+      <text>明文</text>
+    </view>
+    <textarea placeholder="Enter originalText here" value="{{originalText}}" bindinput="onOriginalTextChange"></textarea>
+    <view class="p">
+      <text>隐藏信息</text>
+    </view>
+    <textarea placeholder="Enter secretMessage here" value="{{secretMessage}}" bindinput="onSecretMessageChange"></textarea>
+
+    <view class="button-container">
+      <button bindtap="down">加密</button>
+      <button bindtap="up">解密</button>
+    </view>
+  </view>
+
+  <view class="output-section">
+    <view class="p">
+      <text>密文</text>
+    </view>
+    <textarea placeholder="Enter FullMessage here" value="{{outputText}}" bindinput="onFullMessageChange"></textarea>
+    <view class="button-container">
+      <button bindtap="copyText">复制文本</button>
+      <button bindtap="pasteText">粘贴文本</button>
+    </view>
+  </view>
+</view>

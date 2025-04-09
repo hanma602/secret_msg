@@ -1,0 +1,39 @@
+/* pages/emoji-message/index.wxss */
+.container {
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+.p {
+  margin-bottom: 5px;
+}
+.input-section {
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+}
+
+.output-section {
+  margin-top: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between; /* 或者使用 space-around, space-evenly 等 */
+  margin-top: 10px; /* 根据需要调整间距 */
+}
+
+.button-container button {
+  flex: 1;
+  margin: 0 5px; /* 根据需要调整间距 */
+}

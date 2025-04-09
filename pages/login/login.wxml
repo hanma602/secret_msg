@@ -1,0 +1,10 @@
+<!-- pages/login/login.wxml -->
+<view class="container">
+  <button 
+    class="button"
+    bindtap="handleLogin"
+    loading="{{isLoading}}"
+  >
+    登录
+  </button>
+</view>
