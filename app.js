@@ -6,7 +6,7 @@ AV.setAdapters(adapters);
 AV.debug.enable(); // 开启调试模式，输出详细日志
 
 AV.init({
-  appId: 'SaroR90AD4lQZQLTyi3NOtoB-gzGzoHsz',
+  appId: 'SaroR90AD4lQZQLTyi3NOtoB-gzGzoHsz',//
   appKey: 'yT16CKbre8nvt2R4W22uv7hI',
   serverURLs: "https://saror90a.lc-cn-n1-shared.com",
 });
